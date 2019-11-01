@@ -1,0 +1,223 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings"; // ---------------------------------------------
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css); // Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+$mainColor: #000;
+$headingColor: #A32638;
+$mainFontSize: 22px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: #fff;
+	}
+}
+$logo_height: 60px;
+/********************
+Title Slide Settings
+********************/
+.reveal .slides .title-slide {
+	text-align: center;
+	vertical-align: middle;
+	// width: 960px;
+	// height: 300px;
+}
+/********************
+Fixed Size Slide Settings (HTML)
+********************/
+.reveal .slides .fixed-slide {
+	// That would be wide screen:
+	//width: 1280px;
+	width: 960px;
+	height: 720px;
+	padding: 0px 20px 20px;
+	margin-top: 25px;
+	// background-color: #777777;
+	// padding-left: 500px;
+	// padding-right: 100px;
+}
+
+
+.reveal .slides .fixed-slide > h1,
+h2,
+h3,
+h4 {
+	// padding-left: 0px;
+
+	position: relative;
+}
+
+.reveal .slides .fixed-slide .logos {
+	position: absolute;
+	// margin-bottom: 0;
+	width: 100%;
+	bottom: 5%;
+}
+
+.reveal .slides .fixed-slide img {
+	border: none;
+	box-shadow: none;
+	// height: 50px;
+	margin: 0;
+	max-width: 100%;
+}
+
+.reveal .slides .fixed-slide li {
+	margin: 5px 0;
+}
+/********************
+Fixed Size Slide Settings (Markdown, needs another >section element)
+********************/
+.reveal .slides .markdown {
+	width: 960px;
+	height: 720px;
+	padding: 0;
+	// background-color: #777777
+}
+
+.reveal .slides .markdown .fixed-slide > section > h1,
+h2,
+h3,
+h4 {
+	position: relative;
+}
+
+// .reveal .slides .default-logo-left {
+// 	position: absolute;
+// 	vertical-align: baseline;
+// 	width: 100%;
+// 	height: 50px;
+// 	background-image: url("uulm/bws_logo.png");
+// 	background-repeat: no-repeat;
+// 	background-position: left;
+// 	background-size: contain;
+// 	bottom: 5%;
+// 	margin-left: 150px;
+// }
+
+
+.reveal .slides  .logos-column{
+	display: flex;
+	justify-content: flex-end;
+	flex-direction:column;
+	height: 95%;
+}
+
+
+
+
+.reveal .slides .default-logo-left {
+	/* position: absolute; */
+	/* vertical-align: baseline; */
+	width: 50%;
+	height: 50px;
+	float:left;
+	background-image: url("uulm/bws_logo.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// .reveal .slides .default-logo-right {
+// 	position: absolute;
+// 	vertical-align: baseline;
+// 	width: 85%;
+// 	height: 50px;
+// 	background-image: url("uulm/uulm_font_blue.png");
+// 	background-repeat: no-repeat;
+// 	background-position: right;
+// 	background-size: contain;
+// 	bottom: 5%;
+// }
+
+.reveal .slides .default-logo-right {
+	width: 50%;
+	height: 50px;
+	background-image: url("uulm/uulm_font_blue.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	background-position: center;
+	float: right;
+}
+
+
+
+
+
+.reveal .slides .fixed-slide img.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px;
+	height: 320px;
+}
+/*********************************************
+ * Source Annotation for images
+ *********************************************/
+.reveal .slides .source {
+	// position: inherit;
+	// left: 60px;
+	// top: 644px;
+	// padding-right: 175px;
+	color: #777;
+	font-size: 16px;
+	letter-spacing: 0;
+	padding-left: 50px;
+	padding-top: 15px;
+	text-align: left;
+	position: absolute;
+	bottom: 150px;
+	right:10px
+	// line-height: 18px;
+}
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+	position: absolute;
+	display: block;
+	left: 50%;
+	bottom: 80px;
+	z-index: 31;
+	font-family: Helvetica, sans-serif;
+	font-size: 26px;
+	font-weight: bold;
+	line-height: 1;
+	color: $headingColor;
+	background: none;
+	// background-color: #fff;//rgba( 0, 0, 0, 0.4 );
+	// padding: 5px;
+}
+// Theme template ------------------------------
+@import "../template/theme"; // ---------------------------------------------

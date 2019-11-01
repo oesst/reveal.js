@@ -1,49 +1,163 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>Learning Spatially Aligned Auditory Maps - Timo Oess </title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/uni_ulm.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<div style='margin-top: 0px;text-align: end;font-size: medium;color:#A32638'>ISAAR 2019 &nbsp; &nbsp; <span style='color:#000000'> Timo Oess </span> &nbsp; &nbsp; Ulm University</div>
+
+
+			<section class="title-slide">
+				<h1>Title Slide</h1>
+				<p> This is the cover slide with centered text</p>
+
+
+				<aside class="notes">
+				</aside>
+
+			</section>
+
+
+			<section  class='markdown'  data-markdown>
+					<textarea data-template>
+						## Markdown Slide
+
+						A paragraph with some text and a [link](http://hakim.se).
+					</textarea>
+
+			</section>
+
+
+
+			<section class="fixed-slide">
+				<h2>This is a regular slide</h2>
+				<p>Lorem ipsum</p>
+
+
+
+			</section>
+
+
+			<section data-markdown="example.md"
+			 data-separator="^<!-- New Slide -->"
+			 data-separator-vertical="^<!-- New Subslide -->"
+			 data-separator-notes="^Note:"
+			 data-charset="iso-8859-15">
+			<!--
+					Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+					For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+			-->
+			</section>
+
+			<section>
+				<section id="fragments">
+					<h2>Fragments</h2>
+					<p>Hit the next arrow...</p>
+					<p class="fragment">... to step through ...</p>
+					<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+					<aside class="notes">
+						This slide has fragments which are also stepped through in the notes window.
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Fragment Styles</h2>
+					<p>There's different types of fragments, like:</p>
+					<p class="fragment grow">grow</p>
+					<p class="fragment shrink">shrink</p>
+					<p class="fragment fade-out">fade-out</p>
+					<p>
+						<span style="display: inline-block;" class="fragment fade-right">fade-right, </span>
+						<span style="display: inline-block;" class="fragment fade-up">up, </span>
+						<span style="display: inline-block;" class="fragment fade-down">down, </span>
+						<span style="display: inline-block;" class="fragment fade-left">left</span>
+					</p>
+					<p class="fragment fade-in-then-out">fade-in-then-out</p>
+					<p class="fragment fade-in-then-semi-out">fade-in-then-semi-out</p>
+					<p>Highlight <span class="fragment highlight-red">red</span> <span class="fragment highlight-blue">blue</span> <span class="fragment highlight-green">green</span></p>
+				</section>
+			</section>
+
+
+
+
+
+			<div class='logos-column'>
+				<div style=''>
+					<div class='default-logo-left'></div>
+					<div class='default-logo-right'></div>
+				</div>
 			</div>
+
+
+
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true
+				},
+				{
+					src: 'plugin/math/math.js',
+					async: true
+				}
+
+			],
+			// Display the page number of the current slide
+			slideNumber: true,
+
+			// Add the current slide number to the URL hash so that reloading the
+			// page/copying the URL will return you to the same slide
+			hash: true,
+
+			// Help the user learn the controls by providing hints, for example by
+			// bouncing the down arrow when they first encounter a vertical slide
+			controlsTutorial: false,
+		});
+	</script>
+</body>
+
 </html>
